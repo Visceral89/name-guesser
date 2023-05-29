@@ -1,0 +1,28 @@
+@import "variables";
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.heading {
+	font-weight: $fat;
+}
+
+.gradient {
+	background: linear-gradient(45deg, $violet, $red, $orange);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
