@@ -35,8 +35,8 @@ const Card = () => {
 		<motion.div
 			className={styles.card}
 			initial={{ scale: 0 }}
-			animate={{ scale: 1 }}
-			transition={{ type: "spring", stiffness: 260, damping: 20 }}
+			animate={{ scale: 1, delay: 0.5 }}
+			transition={{ type: "spring", stiffness: 200, damping: 15 }}
 		>
 			<div>Please enter your name and age to calculate your REAL age!</div>
 			<div>
