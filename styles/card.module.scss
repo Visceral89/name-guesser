@@ -26,17 +26,34 @@
 	height: $p * 2;
 	border: none;
 	border-radius: $bord/2;
+	background-color: $grey;
 	&::placeholder {
 		text-indent: $p/2;
 		opacity: 0.5;
 	}
 	&:focus {
 		outline: none;
-		background-color: $grey;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	}
 }
 
 .btn {
 	height: $p * 2;
+	font-weight: 600;
 	border-radius: $bord/2;
+	background: $grad;
+	color: $white;
+	border-color: $white;
+	border: none;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	&:hover {
+		box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
+		transform: translateY(-3px);
+	}
+	&:active {
+		border: 3px solid $black;
+		color: $black;
+		background: transparent;
+	}
 }
