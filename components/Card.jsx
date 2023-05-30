@@ -12,6 +12,10 @@ const Card = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setState("loading");
+
+		setTimeout(() => {
+			setState("result");
+		}, 5000);
 	};
 
 	return (
@@ -21,9 +25,6 @@ const Card = () => {
 			animate={{ scale: 1, delay: 0.5 }}
 			transition={{ type: "spring", stiffness: 200, damping: 20 }}
 		>
-			<div className={styles.parag}>
-				Let the power of generative AI to figure out your name and age!
-			</div>
 			<div>
 				{state === "form" && (
 					<motion.form
@@ -31,6 +32,9 @@ const Card = () => {
 						exit={{ opacity: 0 }}
 						onSubmit={handleSubmit}
 					>
+						<div className={styles.parag}>
+							Let the power of generative AI to figure out your name and age!
+						</div>
 						<input
 							type="text"
 							placeholder="Name"
