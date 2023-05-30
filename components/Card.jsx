@@ -10,6 +10,7 @@ const Card = () => {
 	const [name, setName] = useState("");
 	const [age, setAge] = useState("");
 	const [state, setState] = useState("form");
+	const loadtime = 5000;
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -17,7 +18,7 @@ const Card = () => {
 
 		setTimeout(() => {
 			setState("result");
-		}, 5000);
+		}, loadtime);
 	};
 
 	return (
@@ -56,7 +57,7 @@ const Card = () => {
 						</button>
 					</motion.form>
 				)}
-				{state === "loading" && <Loading />}
+				{state === "loading" && <Loading duration={loadtime} />}
 				{state === "result" && <Result name={name} age={age} />}
 			</div>
 		</motion.div>

@@ -1,0 +1,14 @@
+@import "variables";
+
+.container {
+	//Container Stuff
+	width: 100%;
+	height: 20px;
+	background-color: $white;
+}
+
+.loading {
+	//Loading Bar
+	height: 100%;
+	background: $grad;
+}
