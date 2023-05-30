@@ -26,6 +26,8 @@
 .card form {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: $p;
 	margin-top: $p * 2;
 }
@@ -53,6 +55,7 @@
 .btn {
 	height: $p * 2;
 	font-weight: 600;
+	width: 300px;
 	border-radius: $bord/2;
 	background: $grad;
 	color: $white;

@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import styles from "@/styles/card.module.scss";
 import { useState } from "react";
+import Loading from "./Loading";
+import Result from "./Result";
 
 const Card = () => {
 	const [name, setName] = useState("");
@@ -54,21 +56,8 @@ const Card = () => {
 						</button>
 					</motion.form>
 				)}
-				{state === "loading" && (
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						className={styles.loading}
-					>
-						Loading...
-					</motion.div> // Loadingbar goes here.
-				)}
-				{state === "result" && (
-					<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-						Hello {name}, your age is {age}!
-					</motion.div>
-				)}
+				{state === "loading" && <Loading />}
+				{state === "result" && <Result name={name} age={age} />}
 			</div>
 		</motion.div>
 	);
