@@ -10,7 +10,7 @@ const Card = () => {
 	const [name, setName] = useState("");
 	const [age, setAge] = useState("");
 	const [state, setState] = useState("form");
-	const loadtime = 5000;
+	const loadtime = 20000;
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

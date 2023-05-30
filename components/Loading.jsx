@@ -26,6 +26,7 @@ const Loading = ({ duration }) => {
 
 	return (
 		<div className={styles.container}>
+			Loading...
 			<motion.div
 				initial={{ width: 0 }}
 				animate={{ width: `${progress}%` }}
