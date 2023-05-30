@@ -6,6 +6,7 @@ const Loading = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
+			transition={{ type: "spring", stiffness: 200, damping: 20 }}
 			className={styles.loading}
 		>
 			Loading...
