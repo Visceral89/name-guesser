@@ -38,7 +38,9 @@ const Card = () => {
 			animate={{ scale: 1, delay: 0.5 }}
 			transition={{ type: "spring", stiffness: 200, damping: 15 }}
 		>
-			<div>Please enter your name and age to calculate your REAL age!</div>
+			<div className={styles.parag}>
+				Let the power of generative AI to figure out your name and age!
+			</div>
 			<div>
 				<form onSubmit={handleSubmit}>
 					<input

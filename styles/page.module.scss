@@ -1,13 +1,18 @@
 @import "variables";
+@import "mixins";
 
 .main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 3rem 6rem 3rem 6rem;
+	padding: 0rem 6rem 0rem 6rem;
 	min-height: 100vh;
 	text-align: center;
+
+	@include query(phone) {
+		padding: 0rem 1rem 0rem 1rem;
+	}
 }
 
 .container {

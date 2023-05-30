@@ -1,9 +1,10 @@
 @import "variables";
+@import "mixins";
 
 .card {
 	background-color: $white;
 	width: 500px;
-	height: 600px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -11,6 +12,15 @@
 	border-radius: 15px;
 	color: $black;
 	font-size: $p;
+	@include query(phone) {
+		width: 95%;
+		height: 400px;
+	}
+}
+
+.parag {
+	margin: 0 2rem 0 2rem;
+	font-weight: 600;
 }
 
 .card form {
@@ -27,6 +37,9 @@
 	border: none;
 	border-radius: $bord/2;
 	background-color: $grey;
+	@include query(phone) {
+		width: 250px;
+	}
 	&::placeholder {
 		text-indent: $p/2;
 		opacity: 0.5;
